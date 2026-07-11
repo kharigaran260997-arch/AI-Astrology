@@ -177,9 +177,9 @@ if user_input:
         # Configure Gemini API with user's API key
         genai.configure(api_key=st.session_state.api_key)
         
-        # Initialize the model
+        # Initialize the model (using gemini-2.0-flash which is latest and widely available)
         model = genai.GenerativeModel(
-            model_name="gemini-1.5-pro",
+            model_name="gemini-2.0-flash",
             system_instruction=system_prompt
         )
         
