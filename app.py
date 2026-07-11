@@ -59,7 +59,7 @@ with st.sidebar:
             horoscope_text = uploaded_file.read().decode("utf-8")
             st.session_state.horoscope_data = horoscope_text
             st.session_state.file_uploaded = True
-            st.success("✅ ஜாதக ஃபைல் வெற்றிகரமாக ஏற்றப்பட்டது", icon="✓")
+            st.success("✅ ஜாதக ஃபைல் வெற்றிகரமாக ஏற்றப்பட்டது")
         except Exception as e:
             st.error(f"❌ ஃபைல் ஏற்றம் தோல்வி: {str(e)}")
             st.session_state.file_uploaded = False
@@ -75,8 +75,8 @@ with st.sidebar:
         """
         ### 🛡️ பாதுகாப்பு குறிப்பு
         - **சர்வரில் சேமிப்பு ஏதுமில்லை**: உங்கள் அனைத்து தரவு பிரவுசர் நினைவு முறையில் மட்டுமே உள்ளது
-        - **தானாக நீக்கம்**: பிரவுசர் ট்যாப் மூடினால் அனைத்து தரவு நிரந்தரமாக அழிந்துவிடும்
-        - **API Key பாதுகாப்பு**: உங்கள் API Key சர்வரில் பெறப்படாது அல்லது লாக் செய்யப்படாது
+        - **தானாக நீக்கம்**: பிரவுசர் ட்யாப் மூடினால் அனைத்து தரவு நிரந்தரமாக அழிந்துவிடும்
+        - **API Key பாதுகாப்பு**: உங்கள் API Key சர்வரில் பெறப்படாது அல்லது லாக் செய்யப்படாது
         """
     )
 
@@ -106,7 +106,7 @@ st.markdown(
 credentials_valid = st.session_state.api_key and st.session_state.file_uploaded
 
 if not credentials_valid:
-    st.info("⚠️ தயவுசெய்து பக்க பக்கவாதிஸை (সাইডবার) பக்ષ দিয়ে:")
+    st.info("⚠️ தயவுசெய்து பக்க பக்கவாதிஸை (சாइடபார) பக்ஷ திய:")
     st.write("1. 🔐 உங்கள் **Gemini API Key** உள்ளிடவும்")
     st.write("2. 📄 உங்கள் **ஜாதக `.txt` ஃபைல்** அப்லோட் செய்யவும்")
     st.write("")
